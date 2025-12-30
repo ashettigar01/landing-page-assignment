@@ -39,8 +39,6 @@ const Hero: React.FC = () => {
             Explore Features
           </a>
         </div>
-
-       
       </div>
     </section>
   );
