@@ -3,7 +3,7 @@ import { IPricing } from "@/types";
 export const pricingDetails: IPricing[] = [
   {
     name: "Starter",
-    price: "₹1,499",
+    price: 29, // ₹29
     features: [
       "Basic cloud integration",
       "Up to 5 team members",
@@ -12,7 +12,7 @@ export const pricingDetails: IPricing[] = [
   },
   {
     name: "Pro",
-    price: "₹2,499",
+    price: 99, // ₹99
     features: [
       "Advanced cloud integration",
       "Up to 20 team members",
