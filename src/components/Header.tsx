@@ -16,12 +16,12 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 mx-auto w-full">
-            <Container className="!px-0">
-                <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-end items-center py-2 px-5 md:py-10">
+        <header className="bg-transparent fixed top-0 left-0 right-0 md:absolute z-50 w-full">
+            <Container>
+                <nav className="shadow-md md:shadow-none bg-white md:bg-transparent flex justify-center items-center py-3 md:py-10">
                     
                     {/* Desktop Menu */}
-                    <ul className="hidden md:flex space-x-6 items-center">
+                    <ul className="hidden md:flex space-x-8 items-center">
                         {menuItems.map(item => (
                             <li key={item.text}>
                                 <Link
@@ -43,20 +43,17 @@ const Header: React.FC = () => {
                     </ul>
 
                     {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
+                    <div className="md:hidden absolute right-5">
                         <button
                             onClick={toggleMenu}
                             type="button"
-                            className="bg-primary text-black focus:outline-none rounded-full w-10 h-10 flex items-center justify-center"
-                            aria-controls="mobile-menu"
-                            aria-expanded={isOpen}
+                            className="bg-primary text-black rounded-full w-10 h-10 flex items-center justify-center"
                         >
                             {isOpen ? (
                                 <HiOutlineXMark className="h-6 w-6" />
                             ) : (
                                 <HiBars3 className="h-6 w-6" />
                             )}
-                            <span className="sr-only">Toggle navigation</span>
                         </button>
                     </div>
                 </nav>
@@ -72,13 +69,13 @@ const Header: React.FC = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
             >
-                <div id="mobile-menu" className="md:hidden bg-white shadow-lg">
-                    <ul className="flex flex-col space-y-4 pt-4 pb-6 px-6">
+                <div className="md:hidden bg-white shadow-lg">
+                    <ul className="flex flex-col space-y-4 py-6 px-6 items-center">
                         {menuItems.map(item => (
                             <li key={item.text}>
                                 <Link
                                     href={item.url}
-                                    className="text-foreground hover:text-primary block"
+                                    className="text-foreground hover:text-primary"
                                     onClick={toggleMenu}
                                 >
                                     {item.text}
@@ -88,7 +85,7 @@ const Header: React.FC = () => {
                         <li>
                             <Link
                                 href="#cta"
-                                className="text-black bg-primary hover:bg-primary-accent px-5 py-2 rounded-full block w-fit"
+                                className="text-black bg-primary px-6 py-2 rounded-full"
                                 onClick={toggleMenu}
                             >
                                 Get Started
