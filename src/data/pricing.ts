@@ -2,33 +2,30 @@ import { IPricing } from "@/types";
 
 export const pricingDetails: IPricing[] = [
   {
-    name: "Basic",
+    name: "Starter",
     price: "₹1,499",
     features: [
-      "Responsive landing page",
-      "Clean UI design",
-      "Basic SEO optimization",
-      "Email support",
+      "Basic cloud integration",
+      "Up to 5 team members",
+      "20GB storage",
     ],
   },
   {
     name: "Pro",
     price: "₹2,499",
     features: [
-      "Everything in Basic",
-      "Advanced UI components",
-      "Performance optimization",
-      "Priority email support",
+      "Advanced cloud integration",
+      "Up to 20 team members",
+      "100GB storage",
     ],
   },
   {
-    name: "Premium",
-    price: "₹3,999",
+    name: "Enterprise",
+    price: "Custom",
     features: [
-      "Everything in Pro",
-      "Custom sections",
-      "Deployment support",
-      "Dedicated assistance",
+      "Full cloud integration",
+      "Unlimited team members",
+      "Unlimited storage",
     ],
   },
 ];
