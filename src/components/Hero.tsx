@@ -40,16 +40,7 @@ const Hero: React.FC = () => {
           </a>
         </div>
 
-        <Image
-          src="/images/hero-mockup.png"
-          width={384}
-          height={340}
-          quality={100}
-          sizes="(max-width: 768px) 100vw, 384px"
-          priority
-          alt="Landing page preview"
-          className="relative mt-12 md:mt-16 mx-auto z-10"
-        />
+       
       </div>
     </section>
   );
