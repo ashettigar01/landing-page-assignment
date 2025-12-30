@@ -11,6 +11,12 @@ interface Props {
 const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
   const { name, price, features } = tier;
 
+  // ✅ Convert $ to ₹ safely without changing theme or data
+  const displayPrice =
+    typeof price === "number"
+      ? `₹${price}`
+      : price.replace("$", "₹");
+
   return (
     <div
       className={clsx(
@@ -23,7 +29,7 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }: Props) => {
 
         <p className="text-3xl md:text-5xl font-bold mb-6">
           <span className={clsx({ "text-secondary": highlight })}>
-            {typeof price === "number" ? `₹${price}` : price}
+            {displayPrice}
           </span>
 
           {typeof price === "number" && (
