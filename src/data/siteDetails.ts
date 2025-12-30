@@ -10,3 +10,4 @@ export const siteDetails = {
     siteLogo: '',
     googleAnalyticsId: '',
 }
+Remove Finwise branding;
