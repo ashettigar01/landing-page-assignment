@@ -32,3 +32,5 @@ export const pricingDetails: IPricing[] = [
     ],
   },
 ];
+export default Pricing;
+
